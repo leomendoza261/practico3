@@ -1,23 +1,24 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import InputNombre from './componentes/InputNombre';
+import Juego from "./componentes/Juego";
 import './App.css';
 
 function App() {
+  const [jugadorNombre, setJugadorNombre] = useState('');
+  const [mostrarJuego, setMostrarJuego] = useState(false);
+
+  const handleNombreSubmit = (nombre) => {
+    setJugadorNombre(nombre);
+    setMostrarJuego(true);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      {!mostrarJuego ? (
+        <InputNombre onNombreSubmit={handleNombreSubmit} />
+      ) : (
+        <Juego jugadorNombre={jugadorNombre} />
+      )}
     </div>
   );
 }
