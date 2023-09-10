@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+# Juego de Piedra, Papel y Tijeras
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este es un juego simple de Piedra, Papel y Tijeras implementado como una aplicación web utilizando React. El juego permite al jugador elegir una de las tres opciones (piedra, papel o tijeras) y jugar contra la computadora. El juego rastrea la puntuación y muestra el resultado de cada ronda.
 
-## Available Scripts
+## Componentes
 
-In the project directory, you can run:
+La aplicación consta de varios componentes de React para gestionar diferentes partes del juego. Aquí hay una breve descripción de cada componente:
 
-### `npm start`
+### Juego
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+El componente principal que maneja la lógica del juego, incluyendo el seguimiento de la puntuación y determinar el ganador del juego. También proporciona la interfaz de usuario para jugar y reiniciar el juego.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Marcador
 
-### `npm test`
+Este componente muestra el marcador del juego, que incluye la puntuación del jugador y la computadora.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Resultado
 
-### `npm run build`
+El componente Resultado muestra las selecciones del jugador y la computadora, así como el resultado de cada ronda del juego. También carga imágenes dinámicamente basadas en las selecciones.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Selector
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+El componente Selector muestra las opciones disponibles para que el jugador seleccione en el juego. Cada opción se representa como un botón con una imagen correspondiente.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Uso
 
-### `npm run eject`
+1. Ingresa tu nombre en la casilla y presiona en el boton "Comenzar"
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. Deberas seleccionar una de las 3 opciones del juego (Piedra, Papel y Tijeras).
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. Observaras el resultado de la ronda en la interfaza que informa el numero de ronda, el resultado de ronda (ganaste, perdiste o empate) y el marcador que informa la cantidad de rondas ganadas por el jugador y la PC.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+4. Cuando se han llevado a cabo todas las ronda la interfaz se modificara informando al ganador del juego.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+5. En caso de querer volver a jugar otra partida puede presionar en el boton "Reiniciar" que reiniciara las rondas y numero de rondas ganados por los jugadores.
 
-## Learn More
+## Reglas de Juego
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+El juego se juega entre dos personas, generalmente llamadas Jugador 1 y Jugador 2 (o el jugador humano contra la computadora en sete caso).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Cada jugador elige una de las tres opciones posibles: Piedra, Papel o Tijeras.
 
-### Code Splitting
+Piedra vence a Tijeras (Piedra gana).
+Tijeras vencen a Papel (Tijeras ganan).
+Papel vence a Piedra (Papel gana).
+El resultado de cada ronda se determina según las reglas anteriores. Un jugador gana la ronda si su elección vence a la elección del otro jugador.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+En caso de que ambos jugadores elijan la misma opción, la ronda termina en empate y no hay ganador.
 
-### Analyzing the Bundle Size
+El juego generalmente se juega al mejor de tres rondas o al mejor de cinco, lo que significa que el primer jugador en ganar tres (o cinco) rondas es el ganador del juego.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
